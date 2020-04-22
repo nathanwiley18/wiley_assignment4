@@ -1,7 +1,10 @@
-public class Application {
-public static void main(String[] args){
-	DuplicateRemover duplicateRemover=new DuplicateRemover();
-	duplicateRemover.remove("problem1.txt");
-	duplicateRemover.write("unique_words.txt");
-}
+public class Application{
+   public static void main(String[] args){
+       String inFilename = "problem2.txt";
+       String outFilename = "unique_word_counts.txt";
+       DuplicateCounter duplicateCounter = new DuplicateCounter();
+       duplicateCounter.count(inFilename);
+       duplicateCounter.write(outFilename);
+       System.out.println("Please check the output file: " + outFilename);
+   }
 }
